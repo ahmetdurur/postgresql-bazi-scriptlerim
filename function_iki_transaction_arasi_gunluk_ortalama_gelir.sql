@@ -22,5 +22,5 @@ begin
 		onceki.t_tarih
 	from 
 		(select * from crypto_transactions where t_id =sonrakiid) as sonraki ,
-		(select * from crypto_transactions where t_id =oncekiid) as onceki ) ;
+		(select * from crypto_transactions where t_id =oncekiid) as onceki order by t_id desc ) ;
 end $$
